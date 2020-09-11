@@ -42,7 +42,6 @@ namespace View
                 comboBox1.DataSource = list;
                 comboBox1.DisplayMember = "Name";
                 comboBox1.ValueMember = "Id";
-
             }
             if (id.HasValue)
             {
@@ -55,6 +54,7 @@ namespace View
                         textBoxScore.Text = view.Score.ToString();
                         dateTimePicker1.Value = view.DateDeath;
                         textBoxType.Text = view.Type;
+                        comboBox1.SelectedIndex = view.GameId - 1;
                     }
                 }
                 catch (Exception ex)
