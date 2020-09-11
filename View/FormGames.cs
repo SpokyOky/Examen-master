@@ -99,15 +99,15 @@ namespace View
             LoadData();
         }
 
-        private void продуктыToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var form = Container.Resolve<FormPlayers>();
-            form.ShowDialog();
-        }
-
         private void отчетыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = Container.Resolve<FormReport>();
+            form.ShowDialog();
+        }
+
+        private void игрокиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = Container.Resolve<FormPlayers>();
             form.ShowDialog();
         }
 

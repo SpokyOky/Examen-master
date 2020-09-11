@@ -19,7 +19,7 @@ namespace Database.Implement
                 if (element != null)
                 {
                     //название
-                    throw new Exception("Уже есть блюдо с таким названием");
+                    throw new Exception("Уже есть игра с таким названием");
                 }
                 if (model.Id.HasValue)
                 {

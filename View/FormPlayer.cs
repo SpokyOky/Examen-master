@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 using Unity;
 
 namespace View
@@ -79,7 +80,24 @@ namespace View
             if (comboBox1.SelectedValue == null)
             {
                 //nas
-                MessageBox.Show("Выберите блюдо", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Выберите игру", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (Regex.IsMatch(textBoxFullName.Text, @"^[а-яА-Я]+$"))
+            {
+                MessageBox.Show("В названии могут быть только буквы", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (Regex.IsMatch(textBoxScore.Text, @"^[0-9]+$"))
+            {
+                MessageBox.Show("Счётом могут быть только цифры", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (Regex.IsMatch(textBoxType.Text, @"^[а-яА-Я]+$"))
+            {
+                MessageBox.Show("Типом персонажа могут быть только буквы", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             try

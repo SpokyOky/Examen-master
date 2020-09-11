@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.изделиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.игрокиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сохранитьФайлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView = new System.Windows.Forms.DataGridView();
@@ -44,7 +44,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.изделиеToolStripMenuItem,
+            this.игрокиToolStripMenuItem,
             this.отчетыToolStripMenuItem,
             this.сохранитьФайлToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -53,12 +53,12 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // изделиеToolStripMenuItem
+            // игрокиToolStripMenuItem
             // 
-            this.изделиеToolStripMenuItem.Name = "изделиеToolStripMenuItem";
-            this.изделиеToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
-            this.изделиеToolStripMenuItem.Text = "изделие";
-            this.изделиеToolStripMenuItem.Click += new System.EventHandler(this.продуктыToolStripMenuItem_Click);
+            this.игрокиToolStripMenuItem.Name = "игрокиToolStripMenuItem";
+            this.игрокиToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.игрокиToolStripMenuItem.Text = "игроки";
+            this.игрокиToolStripMenuItem.Click += new System.EventHandler(this.игрокиToolStripMenuItem_Click);
             // 
             // отчетыToolStripMenuItem
             // 
@@ -156,7 +156,7 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem изделиеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem игрокиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отчетыToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button buttonAdd;

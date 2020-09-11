@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 using Unity;
 
 namespace View
@@ -61,13 +62,24 @@ namespace View
         {
             if (string.IsNullOrEmpty(textBoxTitle.Text))
             {
-                MessageBox.Show("Заполните название", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Заполните название игры", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (string.IsNullOrEmpty(textBoxSubject.Text))
             {
                 //nas
-                MessageBox.Show("Заполните вид блюда", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Заполните имя ведущего", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (Regex.IsMatch(textBoxTitle.Text, @"^[а-яА-Я]+$"))
+            {
+                MessageBox.Show("В названии могут быть только буквы", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (Regex.IsMatch(textBoxSubject.Text, @"^[а-яА-Я]+$"))
+            {
+                MessageBox.Show("В имени ведущего могут быть только буквы", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             try
