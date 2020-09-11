@@ -71,13 +71,13 @@ namespace View
                 MessageBox.Show("Заполните имя ведущего", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (Regex.IsMatch(textBoxTitle.Text, @"^[а-яА-Я]+$"))
+            if (!Regex.IsMatch(textBoxTitle.Text, @"^[а-яА-Я]+$"))
             {
                 MessageBox.Show("В названии могут быть только буквы", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (Regex.IsMatch(textBoxSubject.Text, @"^[а-яА-Я]+$"))
+            if (!Regex.IsMatch(textBoxSubject.Text, @"^[а-яА-Я]+$"))
             {
                 MessageBox.Show("В имени ведущего могут быть только буквы", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
