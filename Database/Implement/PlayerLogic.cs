@@ -2,6 +2,7 @@
 using Logic.BindingModel;
 using Logic.Interface;
 using Logic.ViewModel;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -63,7 +64,7 @@ namespace Database.Implement
         {
             using (var context = new Database())
             {
-                return context.Players
+                return context.Players.Include(x => x.Game)
                 .Where(rec => model == null || rec.Id == model.Id 
                 || (model.DateFrom.HasValue && model.DateTo.HasValue 
                 && rec.Game.DateCreate >= model.DateFrom && rec.Game.DateCreate <= model.DateTo))
