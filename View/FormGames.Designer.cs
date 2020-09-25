@@ -30,8 +30,6 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.игрокиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.сохранитьФайлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonCh = new System.Windows.Forms.Button();
@@ -44,9 +42,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.игрокиToolStripMenuItem,
-            this.отчетыToolStripMenuItem,
-            this.сохранитьФайлToolStripMenuItem});
+            this.игрокиToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(647, 24);
@@ -59,20 +55,6 @@
             this.игрокиToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.игрокиToolStripMenuItem.Text = "игроки";
             this.игрокиToolStripMenuItem.Click += new System.EventHandler(this.игрокиToolStripMenuItem_Click);
-            // 
-            // отчетыToolStripMenuItem
-            // 
-            this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
-            this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
-            this.отчетыToolStripMenuItem.Text = "отчеты";
-            this.отчетыToolStripMenuItem.Click += new System.EventHandler(this.отчетыToolStripMenuItem_Click);
-            // 
-            // сохранитьФайлToolStripMenuItem
-            // 
-            this.сохранитьФайлToolStripMenuItem.Name = "сохранитьФайлToolStripMenuItem";
-            this.сохранитьФайлToolStripMenuItem.Size = new System.Drawing.Size(107, 20);
-            this.сохранитьФайлToolStripMenuItem.Text = "сохранить файл";
-            this.сохранитьФайлToolStripMenuItem.Click += new System.EventHandler(this.сохранитьФайлToolStripMenuItem_Click);
             // 
             // dataGridView
             // 
@@ -157,12 +139,10 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem игрокиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem отчетыToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonCh;
         private System.Windows.Forms.Button buttonDel;
         private System.Windows.Forms.Button buttonUpd;
-        private System.Windows.Forms.ToolStripMenuItem сохранитьФайлToolStripMenuItem;
     }
 }

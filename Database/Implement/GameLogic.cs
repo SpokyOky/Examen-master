@@ -18,7 +18,6 @@ namespace Database.Implement
                 Game element = context.Games.FirstOrDefault(rec => rec.Name == model.Name && rec.Id != model.Id);
                 if (element != null)
                 {
-                    //название
                     throw new Exception("Уже есть игра с таким названием");
                 }
                 if (model.Id.HasValue)

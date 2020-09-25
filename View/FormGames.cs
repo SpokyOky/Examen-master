@@ -1,5 +1,4 @@
 ﻿using Logic.BindingModel;
-using Logic.BuisnessLogic;
 using Logic.Interface;
 using System;
 using System.Collections.Generic;
@@ -21,13 +20,10 @@ namespace View
 
         private readonly IGame Game;
 
-        private readonly BackUpAbstractLogic backUpAbstractLogic;
-
-        public FormGames(IGame Game, BackUpAbstractLogic backUpAbstractLogic)
+        public FormGames(IGame Game)
         {
             InitializeComponent();
             this.Game = Game;
-            this.backUpAbstractLogic = backUpAbstractLogic;
         }
 
         private void FormGames_Load(object sender, EventArgs e)
@@ -99,36 +95,10 @@ namespace View
             LoadData();
         }
 
-        private void отчетыToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var form = Container.Resolve<FormReport>();
-            form.ShowDialog();
-        }
-
         private void игрокиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = Container.Resolve<FormPlayers>();
             form.ShowDialog();
-        }
-
-        private void сохранитьФайлToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (backUpAbstractLogic != null)
-                {
-                    var fbd = new FolderBrowserDialog();
-                    if (fbd.ShowDialog() == DialogResult.OK)
-                    {
-                        backUpAbstractLogic.CreateArchive(fbd.SelectedPath);
-                        MessageBox.Show("Файл сохранен", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        } 
     }
 }

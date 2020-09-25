@@ -1,5 +1,4 @@
 ﻿using Database.Implement;
-using Logic.BuisnessLogic;
 using Logic.Interface;
 using System;
 using System.Collections.Generic;
@@ -29,7 +28,6 @@ namespace View
             var currentContainer = new UnityContainer();
             currentContainer.RegisterType<IPlayer, PlayerLogic>(new HierarchicalLifetimeManager());
             currentContainer.RegisterType<IGame, GameLogic>(new HierarchicalLifetimeManager());
-            currentContainer.RegisterType<BackUpAbstractLogic, BackUpLogic>(new HierarchicalLifetimeManager());
             return currentContainer;
         }
     }

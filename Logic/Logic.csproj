@@ -8,4 +8,8 @@
     <PackageReference Include="PDFsharp-MigraDoc" Version="1.50.5147" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="BuisnessLogic\" />
+  </ItemGroup>
+
 </Project>
